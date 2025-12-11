@@ -9,7 +9,7 @@ import scipy.stats as sps
 from sklearn.metrics import mean_absolute_error
 
 # ---------------- Config ----------------
-BEST_LAMBDA = -0.03  # set this to your chosen Box–Cox lambda
+BEST_LAMBDA = -0.03  
 
 st.set_page_config(
     page_title="Buenos Aires Apartment Price Dashboard",
