@@ -29,14 +29,14 @@ model, std_scaler = load_model_and_scaler()
 
 @st.cache_data
 def load_data():
-    # df_full_buenos_aires.pkl must be created from your wrangled df_full
+    
     with open("df_full_buenos_aires.pkl", "rb") as f:
         df_full = pickle.load(f)
     return df_full
 
 df_full = load_data()
 
-# ---------------- Diagnostics data (drop NaNs) ----------------
+# ---------------- Diagnostics data (dropping NaNs) ----------------
 diag_df = df_full[["latitude", "longitude", "surface_covered_in_m2", "price_aprox_usd"]].dropna()
 
 X_all = diag_df[["latitude", "longitude", "surface_covered_in_m2"]].copy()
